@@ -67,10 +67,11 @@ export default class UpCommand extends AbstractServerCommand {
       .withKill(this._kill)
       .withPrintIndex(this._printIndex);
 
-    this.log.info(chalk`{yellow     ____              __    ___   v${pkgJson.version}}`);
-    this.log.info(chalk`{yellow    / __/______ ____  / /__ / (_)__  }`);
-    this.log.info(chalk`{yellow   / _// __/ _ \`/ _ \\/  '_// / / _ \\ }`);
-    this.log.info(chalk`{yellow  /_/ /_/  \\_,_/_//_/_/\\_\\/_/_/_//_/ }`);
+    this.log.info(chalk`{yellow     ___    ______ __  ___  v${pkgJson.version}}`);
+    this.log.info(chalk`{yellow    /   |  / ____ /  |/  /}`);
+    this.log.info(chalk`{yellow   / /| | / __/  / /|_/ / }`);
+    this.log.info(chalk`{yellow  / ___ |/ /___ / /  / /  }`);
+    this.log.info(chalk`{yellow /_/  |_/_____ /_/  /_/   }`);
     this.log.info('');
 
     const ref = await GitUtils.getBranch(this.directory);
